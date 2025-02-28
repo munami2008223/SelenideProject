@@ -4,6 +4,8 @@ on: [ push, pull_request ]
 
 jobs:
   build:
+    build_script:
+      - ./gradlew test --info -Dselenide.headless=true
 
     runs-on: ubuntu-latest
 
