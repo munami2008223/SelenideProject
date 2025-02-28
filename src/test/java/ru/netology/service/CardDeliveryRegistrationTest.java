@@ -20,7 +20,7 @@ public class CardDeliveryRegistrationTest {
     @Test
     void MustSuccessfullyCompleteTheOrderForm() {
         Selenide.open("http://localhost:9999/");
-        $("[data-test-id='city'] input").setValue("Тобольск");
+        $("[data-test-id='city'] input").setValue("Тюмень");
         String planningDate = generateDate(4, "dd.MM.yyyy");
         $("[data-test-id='date'] input").press(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id='date'] input").setValue(planningDate);
